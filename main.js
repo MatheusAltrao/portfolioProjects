@@ -78,6 +78,7 @@ buttonStore.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
   showButtonToTop()
+  animeScroll()
 })
 
 
@@ -159,3 +160,17 @@ submit.addEventListener('click', (ev) => {
 
 
 
+/* animated */
+const target = document.querySelectorAll('[data-anime]')
+const animationClass = 'animate'
+
+function animeScroll() {
+  const windowTop = window.pageYOffset + (window.innerHeight * 0.80)
+  target.forEach((e) => {
+    if (windowTop > e.offsetTop) {
+      e.classList.add(animationClass)
+    } else {
+      e.classList.remove(animationClass)
+    }
+  })
+}
