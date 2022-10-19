@@ -354,7 +354,7 @@ footer {
 
 footer a {
   color: #fff;
-  text-decoration: none;
+
 }
 
 footer i {
@@ -664,7 +664,10 @@ form {
     grid-template-columns: 1fr;
   }
 
+  .item img:hover {
+    border: 2px solid #e4e4e4;
 
+  }
 
 
   .h-2 {
