@@ -134,9 +134,21 @@ const email = document.getElementById('email')
 const title = document.getElementById('title')
 const message = document.getElementById('message')
 const submit = document.getElementById('submit')
+const sucess = document.getElementById('sucess')
+
+
 
 submit.addEventListener('click', (ev) => {
   ev.preventDefault()
+
+
+  if (fullname.value === '' || email.value === '' || title.value === '' || message.value === '') {
+
+    sucess.innerHTML = 'Form fields were not filled in correctly'
+    sucess.style.color = 'red'
+
+    return
+  }
 
   const templateParams = {
     from_name: document.getElementById('fullname').value,
@@ -153,8 +165,13 @@ submit.addEventListener('click', (ev) => {
     document.getElementById('title').value = ''
     document.getElementById('message').value = ''
 
+    sucess.innerHTML = 'Message sent successfully'
+    sucess.style.color = '#81b71a'
+
   }, (error) => {
     console.log('error: ', error)
+
+
   })
 })
 

@@ -239,6 +239,12 @@ header .max-width {
   margin-top: 10rem;
 }
 
+#sucess {
+  margin-top: 2rem;
+  font-size: 12px;
+  height: 100px;
+}
+
 
 .sendemail {
   margin: 10rem;
@@ -310,6 +316,7 @@ textarea {
   color: #fff;
 
   margin: 0 auto;
+
 
   border: none;
   padding: 0.5rem;
